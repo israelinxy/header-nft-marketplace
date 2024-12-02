@@ -1,0 +1,525 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/*
+* Aquí empieza el proyecto
+*/
+
+//variables fuentes
+$belgrano: "Belgrano", serif;
+$poppins: "Poppins", sans-serif;
+
+//variables colores
+$black: #2E2F38;
+$white: #FFFFFF;
+$red: #FA504D;
+$grey: #8E8E8E;
+
+//mixins
+@mixin button{
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: $red;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: $poppins;
+  font-size: 16px;
+  &::before{ //selecciona el pseudo-elemento ::before del body
+    content: ""; //contenido vacio para que sea solo aplicar un estilo
+    width: 44%; //ancho del contenido
+    background-color: black; //color de fondo
+    top: 0; //coloca el pseudo-elemento arriba del body
+    right: 0; //coloca el pseudo-elemento a la derecha del body
+    bottom: 0; //coloca el pseudo-elemento abajo del body
+    position: fixed; //establece la posicion del elemento como fija
+    z-index: -1;
+}
+
+div.container{
+  max-width: 1200px;
+  margin-left: auto; //el contenido del container se centra automaticamente
+  margin-right: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  position: relative;
+  .logo{
+    width: 950px;
+    height: 365px;
+    top: 830px;
+    left: 1140px;
+    rotate: +90deg;
+    opacity: 0.05;
+    font-family: $belgrano;
+    font-weight: 400;
+    font-size: 288px;
+    color: $red;
+    position: fixed;
+  }
+  }
+}
+
+header{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  a{
+    text-decoration: none;
+  }
+  .header__logo{
+    img{
+      width: 100px;
+      height:40px;
+    }
+  }
+  .principal-nav{
+    ul{
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin-left: 90px;
+      gap: 35px;
+      a{
+        color: $black;
+        font-weight: 500;
+      }
+    }
+  }  
+  .login{
+    margin-left: auto;
+    ul{
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 30px;    
+      a{
+        color: $white;
+        font-weight: 500;
+      }
+      .btn{
+        @include button()
+      }
+    }
+  }
+}
+
+main{
+  display: grid;
+  grid-template-columns: 54% 46%;
+  padding-top: 30px;
+  .hero{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    padding-top: 30px;
+    h1{
+      font-family: $belgrano;
+      font-size: 47px;
+      font-weight: 400;
+      line-height: 70px;
+      position: relative;
+      
+      &::before{
+        content: "";
+        position: absolute;
+        background-image: url("img/nft-lazo.svg");
+        background-position: center;
+        background-size: 220px 70px ;
+      }
+    }
+    &__subtitle{
+      padding-top: 10px;
+      font-family: $poppins;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 40px;
+      color: $grey;
+      position: relative;
+      &::before{
+        content: "";
+        width: 60px;
+        height: 3px;
+        background-color: $red;
+        position: absolute;
+        left: 0;
+        bottom: 11px;
+      }
+    }
+    &__buttons{
+      padding-top: 30px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      .btn{
+        color: $white;
+        text-decoration: none;
+        @include button();
+        padding: 12px 60px;
+        font-weight: 300;
+      }
+      a{
+        color: $black;
+        font-weight: 300;
+      }
+    }
+  }
+  .featured{
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    padding-top: 50px;
+    &__title{
+      font-family: $belgrano;
+      font-weight: 400;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    &__imgs{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      img{
+        width: 48%;
+        border: 1px solid $grey;
+        padding: 4px;
+      }
+    }
+  }
+  .nft {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+    padding-left: 60px;
+    padding-right: 30px;
+  
+    &__imagecontainer {
+      img {
+        max-width: 100%;
+      }
+    }
+  
+    &__data {
+      background-color: white;
+      padding: 16px;
+      margin-top: -30px;
+      position: relative;
+      margin-bottom: 40px;
+    }
+  
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid black;
+    }
+  
+    &__owner {
+      display: flex;
+      &-data {
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+  
+    &__username {
+      color: $grey;
+      font-weight: 300;
+    }
+  
+    &__name {
+      font-weight: bold;
+    }
+  
+    &__price {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &-current {
+        color: $grey;
+      }
+      &-number {
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+  
+    &__buttons {
+      justify-content: space-between;
+      display: flex;
+      > a.btn {
+        @include button();
+        padding: 10px 40px;
+        &:last-child {
+          background-color: transparent;
+          color: red;
+        }
+      }
+    }
+  
+    &__numbers {
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 300;
+    }
+  
+    &__number {
+      color: $red;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+  
+}
