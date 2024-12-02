@@ -15,7 +15,6 @@ Este proyecto presenta un Header de un NFT marketplace preparado para una pantal
 ## Tecnologías Utilizadas ⚙️
 
 - [![Html](https://img.shields.io/badge/HTML-white?style=for-the-badge&logo=html5&logoColor=white&labelColor=black&color=%23E34F26)](src/index.html)
-- [![Css](https://img.shields.io/badge/CSS-white?style=for-the-badge&logo=css3&logoColor=white&labelColor=black&color=%231572B6)](src/css/)
 - [![Sass](https://img.shields.io/badge/SASS-black?style=for-the-badge&logo=Sass&logoColor=white&labelColor=black&color=%23CC6699)](src/sass/)
 
 
