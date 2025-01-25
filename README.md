@@ -5,7 +5,7 @@ Este proyecto presenta un Header de un NFT marketplace preparado para una pantal
 ---
 
 <div align="center">
-  <img src="NFT-marketplace.png" alt="Header de un NFT marketplace" width="55%"/>
+  <img src="NFT-marketplace.png" alt="Header de un NFT marketplace" width="80%"/>
 </div>
 
 
